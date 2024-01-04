@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/icon/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+	</head>
+	
+	<body data-sveltekit-preload-data="hover">
+		<div id="preloader" class="w-full h-screen fixed grid place-items-center bg-white z-[999999]">
+			<img src="/loading.gif" alt="preloader icon">
+		</div>
+
+		<div style="display: contents">%sveltekit.body%</div>
+		<script>
+			const preloader = document.getElementById("preloader");
+			window.addEventListener("load", () => {
+			  preloader.style.display = "none"; 
+			})
+		  </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+	</body>
+</html>
